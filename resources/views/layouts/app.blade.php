@@ -15,9 +15,12 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    @stack('css')
 </head>
 <body>
     <div id="app">
@@ -33,7 +36,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        @auth
+                        <li class="nav-item">
+                            <a href="{{ url('/realtime-chat') }}" class="nav-link">Realtime Chat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('/realtime-chat-v2') }}" class="nav-link">Realtime Chat v2</a>
+                        </li>
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->

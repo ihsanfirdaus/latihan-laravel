@@ -53,9 +53,9 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        $token = md5(uniqid());
+        // $token = md5(uniqid());
 
-        $user->update(['token' => $token]);
+        // $user->update(['token' => $token]);
     }
     
     public function sso(Request $request)

@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function realtimeChat()
+    {
+        return view('realtime-chat');
+    }
+    
+    public function realtimeChatV2()
+    {
+        return view('realtime-chat-v2');
+    }
 }

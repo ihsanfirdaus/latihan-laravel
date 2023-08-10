@@ -81,8 +81,8 @@ class RegisterController extends Controller
      */
     protected function registered(Request $request, $user)
     {
-        $token = md5(uniqid());
+        // $token = md5(uniqid());
 
-        $user->update(['token' => $token]);
+        // $user->update(['token' => $token]);
     }
 }
